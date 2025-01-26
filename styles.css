@@ -1,0 +1,14 @@
+
+#daddy-container {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid magenta;
+}
+
+.column {
+    background-color: cyan;
+    border: 1.5px solid magenta;
+    flex: 1;
+}
