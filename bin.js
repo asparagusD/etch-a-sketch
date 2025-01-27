@@ -1,13 +1,21 @@
 const bigDiv = document.querySelector("#daddy-container");
 let div = [];
-// let subDiv;
-let numberOfSquares;
+let junk;
+let numberOfSquares = 16;
 let cngNumberOfSquares = document.createElement("button");
 cngNumberOfSquares.textContent = "Change number of squares";
+
 bigDiv.appendChild(cngNumberOfSquares);
 cngNumberOfSquares.addEventListener("click", () => {
+    junk = numberOfSquares;
     numberOfSquares = +prompt("How many squares do you need per side, boy?", "");
-    // grid(numberOfSquares);
+    while (numberOfSquares>100 || numberOfSquares<0) {
+        numberOfSquares = +prompt("Enter a value from 1 to 100, boy!", "");
+    }
+    clearGrid(junk);
+    grid(numberOfSquares);
+
+    
 });
 
 function grid(squares) {
@@ -32,15 +40,14 @@ function grid(squares) {
     }
 }
 
-// function clearGrid(removeElements) {
-//     for (let i=0; i<removeElements; i++) {
-//         bigDiv.removeChild(div[i]);
+function clearGrid(removeElements) {
+    for (let i=0; i<removeElements; i++) {
+        bigDiv.removeChild(div[i]);
+    }
+}
 
+grid(numberOfSquares);
 
-//     }
-// }
-
-grid(16);
 
 
 
