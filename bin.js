@@ -29,13 +29,21 @@ function grid(squares) {
             const subDiv = document.createElement("div");
             subDiv.setAttribute("class", "column");
             div[i].appendChild(subDiv);
-    
+            opa = 100;
             subDiv.addEventListener("mouseenter", () => {
-                subDiv.style.cssText = "background-color: beige;";
+                let red = Math.floor(Math.random() * 256);
+                let green = Math.floor(Math.random() * 256);
+                let blue = Math.floor(Math.random() * 256);
+                subDiv.style.cssText = `background-color: rgb(${red},${green},${blue}); opacity: ${opa}%`;
+                opa = opa - 10;
+                
             });
-            subDiv.addEventListener("mouseleave", () => {
-                subDiv.style.cssText = "background-color: cyan;";
-            });
+            // subDiv.addEventListener("mouseleave", () => {
+            //     let red = Math.floor(Math.random() * 256);
+            //     let green = Math.floor(Math.random() * 256);
+            //     let blue = Math.floor(Math.random() * 256);
+            //     subDiv.style.cssText = `background-color: rgb(${red},${green},${blue}); opacity: 50%`;
+            // });
         }
     }
 }

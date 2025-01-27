@@ -4,13 +4,14 @@
     width: 100vh;
     display: flex;
     flex-direction: column;
-    border: 1.5px solid magenta;
+    border: 0.5px solid magenta;
     margin: auto;
+    background-color: black;
 }
 
 .column {
     background-color: cyan;
-    border: 1.5px solid magenta;
+    border: 0.5px solid magenta;
     flex: 1;
 }
 
